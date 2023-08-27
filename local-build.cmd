@@ -17,8 +17,8 @@ SET PATH=^
 
 cmake.exe -G"MinGW Makefiles" ^
 -DCMAKE_BUILD_TYPE=Debug ^
--Dhttplib_DIR="%DOWNLOADS_DIR_LINUX%/cpp-httplib-v0.12.6-mingw64-x86_64-posix-seh-rev0-8.1.0/lib/cmake/httplib" ^
--DOpenSSL_DIR="%DOWNLOADS_DIR_LINUX%/openssl-v3.0.5-x86_64-posix-seh-rev0-8.1.0" ^
+-Dhttplib_DIR="%DOWNLOADS_DIR_LINUX%/cpp-httplib-v0.14.0-mingw64-x86_64-posix-seh-rev0-8.1.0/lib/cmake/httplib" ^
+-DOpenSSL_DIR="%DOWNLOADS_DIR_LINUX%/openssl-v3.0.5-mingw64-x86_64-posix-seh-rev0-8.1.0" ^
 -B./cmake-build &&^
 cd cmake-build &&^
 cmake --build . &&^

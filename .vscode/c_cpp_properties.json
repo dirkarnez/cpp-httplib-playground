@@ -4,8 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${env:USERPROFILE}\\Downloads\\portaudio-v19.7.0-mingw64-x86_64-posix-seh-rev0-8.1.0\\include\\**",
-                "${env:USERPROFILE}\\Downloads\\libsndfile-v1.2.0-mingw64-x86_64-posix-seh-rev0-8.1.0\\include\\**"
+                "${env:USERPROFILE}\\Downloads\\cpp-httplib-v0.14.0-mingw64-x86_64-posix-seh-rev0-8.1.0\\include\\**"
             ],
             "defines": [
                 "_DEBUG",

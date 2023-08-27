@@ -8,14 +8,11 @@ project("cpp-httplib-playground")
 
 SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
 
-# find_package(portaudio 19 EXACT REQUIRED) # PATHS "P:\\Downloads\\cpp-libraries\\portaudio\\build\\cmake\\portaudio")
-find_package(httplib 0.12.6 EXACT REQUIRED)
 
-# if(portaudio_FOUND)
-#     message(STATUS "YES")
-# else()
-#     message(STATUS "NO")
-# endif()
+
+# find_package(portaudio 19 EXACT REQUIRED) # PATHS "P:\\Downloads\\cpp-libraries\\portaudio\\build\\cmake\\portaudio")
+find_package(httplib 0.14.0 EXACT REQUIRED)
+
 
 if(httplib_FOUND)
     message(STATUS "httplib_FOUND: YES")
@@ -24,15 +21,9 @@ else()
 endif()
 
 
-find_package(OpenSSL CONFIG REQUIRED)
-if(OpenSSL_FOUND)
-    message(STATUS "OpenSSL_FOUND: YES")
-else()
-    message(STATUS "OpenSSL_FOUND: NO")
-endif()
 
 add_executable(${PROJECT_NAME}
     "src/main.cpp"
 )
 
-target_link_libraries(${PROJECT_NAME} httplib::httplib OpenSSL::SSL OpenSSL::Crypto)
+target_link_libraries(${PROJECT_NAME} httplib::httplib)
