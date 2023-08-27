@@ -44,7 +44,13 @@ jobs:
       - name: curl cmake-3.24.0-windows-x86_64.zip
         shell: cmd
         run: curl https://github.com/Kitware/CMake/releases/download/v3.24.0/cmake-3.24.0-windows-x86_64.zip -L --output cmake-3.24.0-windows-x86_64.zip && dir && 7z.exe x cmake-3.24.0-windows-x86_64.zip
-      
+
+      - shell: cmd
+        run: |
+          cd /d "cmake-3.24.0-windows-x86_64\share\cmake-3.24\Modules\" &&^
+          del /f FindOpenSSL.cmake &&^
+          dir
+        
       - name: set PATH, check mingw version, cmake generate, build and install
         shell: cmd
         run: |
